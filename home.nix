@@ -9,6 +9,9 @@
   home.packages = with pkgs; [
     fastfetch
     cava
+    prismlauncher
+    lutris
+    cmatrix
   ];
 
   programs.git = {

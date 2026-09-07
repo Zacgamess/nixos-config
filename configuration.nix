@@ -10,6 +10,8 @@
       ./hardware-configuration.nix
     ];
 
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
@@ -109,9 +111,6 @@
   #  wget
    git
    vim
-   prismlauncher
-   lutris
-   vscode
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
@@ -123,7 +122,6 @@
   # };
 
   # List services that you want to enable:
-
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
 
