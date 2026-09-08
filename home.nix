@@ -17,6 +17,8 @@
     lavat
     cowsay
     protonup-qt
+    btop
+    mangohud
   ];
 
   programs.git = {
