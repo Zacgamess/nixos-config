@@ -12,6 +12,11 @@
     prismlauncher
     lutris
     cmatrix
+    cpu-x
+    vesktop
+    lavat
+    cowsay
+    protonup-qt
   ];
 
   programs.git = {
@@ -22,3 +27,4 @@
 
   programs.home-manager.enable = true;
 }
+
