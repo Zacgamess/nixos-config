@@ -19,6 +19,8 @@
     protonup-qt
     btop
     mangohud
+    pcsx2
+    virtualbox
   ];
 
   programs.git = {
