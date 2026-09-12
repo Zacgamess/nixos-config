@@ -20,7 +20,6 @@
     btop
     mangohud
     pcsx2
-    virtualbox
     oneko
   ];
 
