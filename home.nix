@@ -21,6 +21,7 @@
     mangohud
     pcsx2
     virtualbox
+    oneko
   ];
 
   programs.git = {
