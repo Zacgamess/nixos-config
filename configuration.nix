@@ -63,7 +63,9 @@
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-
+  # Servicos de apps
+  systemd.packages = [ pkgs.lact ];
+  systemd.services.lactd.wantedBy = [ "multi-user.target" ];
   # Enable sound with pipewire.
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;
@@ -103,7 +105,7 @@
   enable = true;
   remotePlay.openFirewall = true;
   dedicatedServer.openFirewall = true;
-};
+}; 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
