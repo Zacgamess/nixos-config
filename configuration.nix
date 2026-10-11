@@ -116,6 +116,10 @@
    vim
    lact
    protontricks
+   wget
+   unzip
+   glib
+   winetricks
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
