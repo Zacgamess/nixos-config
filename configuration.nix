@@ -16,7 +16,7 @@
   # kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "nixosdoP.A"; # Meu Hostname.
+  networking.hostName = "nixosgamer"; # Meu Hostname.
   
   # Network.
   networking.networkmanager.enable = true;
@@ -75,7 +75,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       kdePackages.kate
-    #  thunderbird
     ];
   };
 

@@ -6,7 +6,6 @@
 
   home.stateVersion = "26.05";
  
- #Meus programas do Dia a Dia
   home.packages = with pkgs; [
     fastfetch
     cava
@@ -24,7 +23,6 @@
     oneko
   ];
  
- #Git
   programs.git = {
     enable = true;
     userName = "Pedro";
