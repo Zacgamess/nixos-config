@@ -3,6 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-26.05";
+    nixpkgs-unstable.url = "github:nixos/nixpkgs/nixos-unstable";
     home-manager = {
       url = "github:nix-community/home-manager/release-26.05";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -16,11 +17,16 @@
       modules = [
         ./configuration.nix
         home-manager.nixosModules.home-manager
-        {
+        
+        ({ config, pkgs, ... }: {
+          services.ollama.package = inputs.nixpkgs-unstable.legacyPackages.${pkgs.system}.ollama-rocm;
+        })
+
+        ({ config, pkgs, ... }: {
           home-manager.useGlobalPkgs = true;
           home-manager.useUserPackages = true;
           home-manager.users.pedro = import ./home.nix;
-        }
+        })
       ];
     };
   };

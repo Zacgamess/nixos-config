@@ -42,7 +42,7 @@
   # Suporte pra programas X11 
   services.xserver.enable = true;
 
-  # KDE Plasma (uma das melhores interfaces graficas de distros linux).
+  # KDE Plasma (The Goat)
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
@@ -54,9 +54,13 @@
 
   # CUPS Pra Printar
   services.printing.enable = true;
-  # Servicos de apps
+ 
+ # Servicos de apps
   systemd.packages = [ pkgs.lact ];
   systemd.services.lactd.wantedBy = [ "multi-user.target" ];
+   services.ollama = {
+     enable = true;
+   };    
   # Pipewire (Som).
   services.pulseaudio.enable = false;
   security.rtkit.enable = true;

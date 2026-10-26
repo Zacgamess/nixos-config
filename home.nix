@@ -15,12 +15,9 @@
     cpu-x
     vesktop
     lavat
-    cowsay
     protonup-qt
     btop
-    mangohud
     pcsx2
-    oneko
   ];
  
   programs.git = {
