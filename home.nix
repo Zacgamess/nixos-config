@@ -17,8 +17,6 @@
     lavat
     protonup-qt
     btop
-    pcsx2
-    ppsspp
   ];
  
   programs.git = {

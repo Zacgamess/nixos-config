@@ -12,11 +12,14 @@
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
+  boot.kernelParams = [ "amdgpu.ppfeaturemask=0xffffffff" ];
 
   # kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
+  hardware.amdgpu.overdrive.enable = true;
 
-  networking.hostName = "nixosgamer"; # Meu Hostname.
+  #Meu Hostname.
+  networking.hostName = "nixosgamer"; 
   
   # Network.
   networking.networkmanager.enable = true;
@@ -102,6 +105,9 @@
    wget
    unzip
    glib
+   file
+   unrar
+   qbittorrent
    winetricks
   ];
 
