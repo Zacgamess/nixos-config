@@ -86,8 +86,12 @@
   };
 
   # Firefox (melhor navegador de todos).
-  programs.firefox.enable = true;
-
+  programs.firefox = {
+    enable = true;
+    preferences = {
+      "browser.ipProtection.enabled" = true;
+    };
+  };
   # Apps de Close Source
   nixpkgs.config.allowUnfree = true;
  programs.steam = {
